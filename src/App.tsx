@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useCharterStore } from './hooks/useCharterStore';
 import { ResponsibilitiesSection } from './components/ResponsibilitiesSection';
 import { DecisionsSection } from './components/DecisionsSection';

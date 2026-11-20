@@ -1,0 +1,50 @@
+Keep the architecture straightforward so another engineer can extend it.
+
+
+
+Create three connected sections:
+
+
+
+Responsibilities: A table showing each responsibility, its owner, adviser, due date, and status. Highlight responsibilities without an owner. Allow users to add and edit records.
+
+
+
+Decisions: An upcoming-decisions list organized by month. Each decision should open to a record with the question, owner, deadline, options, outcome, and review date. Allow users to create, edit, and complete decisions.
+
+
+
+Giving: A list of charitable organizations showing the family’s interest, a short assessment, proposed gift, decision status, and pledge follow-up. Allow users to add and edit records.
+
+
+
+Populate the app with realistic, entirely fictional data for the Ashford family of Houston: three generations, a family business, a private foundation, an art collection, and two homes. Include examples such as property insurance renewal, annual trust review, a museum art loan, and a charitable gift.
+
+
+
+Use browser local storage so edits persist after refresh. Include a “Reset demo data” button. No backend, login, bank connections, payments, or real client data in this first version.
+
+
+
+Design it to feel calm, refined, and easy to understand: warm ivory backgrounds, deep maroon and periwinkle accents, clear typography, generous spacing, and minimal visual clutter. Avoid pale lavender. Make it work on desktop and mobile.
+
+
+
+All visible buttons should work. Include basic form validation, clear save feedback, and useful empty states.
+
+
+
+Deliver the complete source code and a README explaining how to install, run, and extend the app. Clearly label it as a demonstration using fictional data. 
+
+Here is the complete source code and documentation for Charter, a family-office governance platform from The Harris Office, designed for the fictional Ashford family of Houston.
+
+Architecture Overview
+To keep the codebase straightforward and easily extensible for another engineer, the project uses React 18, TypeScript, and Tailwind CSS via Vite with zero heavy external state libraries:
+
+src/types/charter.ts: Strongly typed domain models (Responsibility, Decision, GivingRecord) and shared status types.
+
+src/data/seedData.ts: Realistic fictional baseline data for the Ashford family across three generations (Arthur & Eleanor, Julian & Claire, Maya & Leo), covering Ashford Energy Holdings, the Ashford Family Foundation, their River Oaks and Aspen properties, and their Post-War American art collection.
+
+src/hooks/useCharterStore.ts: A single custom hook managing localStorage persistence, CRUD operations, cross-section links, toast notifications, and the demo data reset flow.
+
+src/components/: Modular, single-responsibility UI components styled with a calm, editorial palette (warm ivory #FAF8F4, deep maroon #5C1D2A, and slate periwinkle #4A609A).
